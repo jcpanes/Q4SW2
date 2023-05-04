@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<title>Q4 Seatwork 2</title>
+
+	<style type="text/css">
+		
+		body{
+			color: white;
+			background-image: url('img_girl.jpg');
+		}
+
+		th, td{
+			padding: 10px;
+
+
+	</style>
+
+</head>
+<body style="background-color: #123F73; font-family: 'Montserrat', sans-serif;">
+	
+	<h1 align="center">Temperature Converter</h1>
+
+	<hr>
+	<h3 align="center">The Date and Time of Day</h3>
+	<p align="center" id="today"></p>
+
+	<script>
+		const date = new Date();
+		document.getElementById("today").innerHTML = date;
+	</script>
+	<hr>
+
+	<h3>Fahrenheit to Celcius</h3>
+	<p>
+ 	<label>Fahrenheit:</label>
+  	<input id="inputFahrenheit" type="number" placeholder="Input Number" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+	</p>
+	<p>Celcius: <span id="outputCelcius"></span></p>
+
+	<script>
+	function temperatureConverter(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+	}
+	</script>
+
+	<hr>
+	<h3 align="center">Information Table</h3>
+	<table border="1" align="center" style="color: #123F73 ; background-color: white;">
+		<tr align="center" class="bgcolor1">
+			<td><b>Celsius</b></td>
+			<td><b>Fahrenheit</b></td>
+			<td><b>Description</b></td>
+		</tr>
+
+		<tr align="center">
+				<td>-273.15</td>
+				<td>-459.67</td>
+				<td>Absolute zero temperature</td>
+			</tr>
+
+			<tr align="center">
+				<td>0</td>
+				<td>32.0</td>
+				<td>Freezing/melting point of water</td>
+			</tr>
+
+			<tr align="center">
+				<td>21</td>
+				<td>69.8</td>
+				<td>Room temperature</td>
+			</tr>
+
+			<tr align="center">
+				<td>37</td>
+				<td>98.6</td>
+				<td>Average body temperature</td>
+			</tr>
+
+			<tr align="center">
+				<td>100</td>
+				<td>212.0</td>
+				<td>Boiling point of water</td>
+			</tr>
+		</table>
+		 
+
+
+</body>
+</html>
